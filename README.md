@@ -13,7 +13,7 @@ In bioinformatics, the transition from raw annotation files to a structured anal
 
 **Key outcomes include:**
 - **Automated Parsing**: Efficiently handles large-scale GFF3 and FASTA files.
-- **Feature Engineering**: Supports extraction of genes, CDS, exons, and 3' UTR features when present in the supplied GFF3 annotation.
+- **Feature Engineering**: Extracts genomic features such as genes, CDS, exons, and UTRs when present in the supplied GFF3 annotation.
 - **Statistical Rigor**: Calculates sequence-level metrics (GC/AT content, ambiguity counts) and feature-length distributions.
 - **Professional Visualization**: Generates high-resolution, publication-quality figures (DPI 300) for immediate use in research papers or reports.
 
@@ -116,7 +116,7 @@ These results are exported as clean CSVs in the `results/` directory, ready for 
 
 ## 🖼️ Visual Results
 
-The pipeline generates several high-resolution figures to summarize genomic characteristics:
+The pipeline extracted genes, CDS, and exon features from the E. coli annotation. UTR extraction is supported by the pipeline, although no 3' UTR records were present in this bacterial annotation.
 
 | Feature Distribution | GC Content Distribution | Gene Length Distribution |
 | :---: | :---: | :---: |
