@@ -18,9 +18,10 @@ def calculate_sequence_stats(records):
         gc_count = seq.count('G') + seq.count('C')
         at_count = seq.count('A') + seq.count('T')
         n_count = seq.count('N')
+        total_bases = gc_count + at_count
 
-        gc_percent = (gc_count / length * 100) if length > 0 else 0
-        at_percent = (at_count / length * 100) if length > 0 else 0
+        gc_percent = (gc_count / total_bases * 100) if total_bases > 0 else 0
+        at_percent = (at_count / total_bases * 100) if total_bases > 0 else 0
 
         stats.append({
             'sequence_id': record.id,

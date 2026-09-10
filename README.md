@@ -13,7 +13,7 @@ In bioinformatics, the transition from raw annotation files to a structured anal
 
 **Key outcomes include:**
 - **Automated Parsing**: Efficiently handles large-scale GFF3 and FASTA files.
-- **Feature Engineering**: Extracts high-value biological features (Genes, CDS, Exons, 3' UTRs) into structured CSVs for downstream analysis.
+- **Feature Engineering**: Supports extraction of genes, CDS, exons, and 3' UTR features when present in the supplied GFF3 annotation.
 - **Statistical Rigor**: Calculates sequence-level metrics (GC/AT content, ambiguity counts) and feature-length distributions.
 - **Professional Visualization**: Generates high-resolution, publication-quality figures (DPI 300) for immediate use in research papers or reports.
 
@@ -24,7 +24,7 @@ In bioinformatics, the transition from raw annotation files to a structured anal
 This project serves as a portfolio of the following professional skills:
 
 ### 🧬 Bioinformatics & Domain Expertise
-- **Genome Data Processing**: Expert handling of FASTA and GFF3 standards.
+- **Genome Data Processing**: Practical handling of FASTA and GFF3 standards.
 - **Biological Analysis**: Implementation of GC content analysis and genomic feature length distributions.
 - **Standard Compliance**: Adherence to NCBI reference genome standards.
 
@@ -65,7 +65,7 @@ genomic-feature-analysis-pipeline/
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/genomic-feature-analysis-pipeline.git
+git clone https://github.com/waleed-qureshi/genomic-feature-analysis-pipeline.git
 cd genomic-feature-analysis-pipeline
 
 # Set up environment
@@ -108,9 +108,19 @@ The following metrics were extracted and verified from the reference genome:
 The pipeline successfully partitioned the genome into structured datasets, including:
 - **Genes**: Comprehensive list of genomic loci (e.g., `thrL`, `thrA`, `thrB`) with precise start/end coordinates and locus tags.
 - **CDS**: Protein-coding sequences mapped to their respective parent genes.
-- **Exons/UTRs**: Structural boundaries for translation initiation and termination.
+- **Exons/UTRs**: In the E. coli ASM584v2 demonstration dataset, no annotated 3' UTR records were present.
 
 These results are exported as clean CSVs in the `results/` directory, ready for immediate import into downstream analysis tools like R or Python.
+
+---
+
+## 🖼️ Visual Results
+
+The pipeline generates several high-resolution figures to summarize genomic characteristics:
+
+| Feature Distribution | GC Content Distribution | Gene Length Distribution |
+| :---: | :---: | :---: |
+| ![Feature Distribution](figures/feature_distribution.png) | ![GC Content](figures/gc_content_distribution.png) | ![Gene Length](figures/gene_length_distribution.png) |
 
 ---
 

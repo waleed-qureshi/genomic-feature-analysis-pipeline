@@ -5,14 +5,13 @@ import argparse
 import sys
 import os
 
-sys.path.insert(0, 'src')
 
-from parse_fasta import parse_fasta, calculate_sequence_stats
-from parse_gff import parse_gff
-from extract_features import extract_all_features, save_features
-from statistics import (sequence_stats_summary, feature_stats_summary,
-                        gene_stats, cds_stats, exon_stats, print_summary)
-from visualize import generate_all_figures
+from src.parse_fasta import parse_fasta, calculate_sequence_stats
+from src.parse_gff import parse_gff
+from src.extract_features import extract_all_features, save_features
+from src.statistics import (sequence_stats_summary, feature_stats_summary,
+                            gene_stats, cds_stats, exon_stats, print_summary)
+from src.visualize import generate_all_figures
 
 
 def run_pipeline(fasta_path, gff_path, output_dir='results', figures_dir='figures'):
