@@ -13,7 +13,7 @@ In bioinformatics, the transition from raw annotation files to a structured anal
 
 **Key outcomes include:**
 - **Automated Parsing**: Efficiently handles large-scale GFF3 and FASTA files.
-- **Feature Engineering**: Supports extraction of genes, CDS, exons, and 3' UTR features when present in the supplied GFF3 annotation.
+- **Feature Engineering**: Extracts genomic features such as genes, CDS, exons, and UTRs when present in the supplied GFF3 annotation.
 - **Statistical Rigor**: Calculates sequence-level metrics (GC/AT content, ambiguity counts) and feature-length distributions.
 - **Professional Visualization**: Generates high-resolution, publication-quality figures (DPI 300) for immediate use in research papers or reports.
 
@@ -24,7 +24,7 @@ In bioinformatics, the transition from raw annotation files to a structured anal
 This project serves as a portfolio of the following professional skills:
 
 ### 🧬 Bioinformatics & Domain Expertise
-- **Genome Data Processing**: Practical handling of FASTA and GFF3 standards.
+- **Genome Data Processing**: Programmatic processing of FASTA and GFF3 genomic data.
 - **Biological Analysis**: Implementation of GC content analysis and genomic feature length distributions.
 - **Standard Compliance**: Adherence to NCBI reference genome standards.
 
@@ -86,7 +86,7 @@ python main.py --fasta data/genome.fasta --gff data/annotation.gff3
 
 ## 📊 Data Provenance & Actual Results
 
-To ensure scientific reproducibility and credibility, this pipeline was validated using a gold-standard public dataset from the NCBI RefSeq database.
+The pipeline extracted genes, CDS, and exon features from the E. coli annotation. UTR extraction is supported by the pipeline, although no 3' UTR records were present in this bacterial annotation.
 
 ### 🧬 Dataset Specifications
 - **Organism**: *Escherichia coli* str. K-12 substr. MG1655
